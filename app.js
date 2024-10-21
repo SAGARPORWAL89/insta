@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 // Initialize the app
 const app = express();
-live_url = 'mongodb+srv://sagarporwal8370:AV6y5dV6udAvHFl3@cluster0.pnghy.mongodb.net/userDB?retryWrites=true&w=majority&appName=Cluster0'
+live_url = 'mongodb+srv://sagarporwal8370:sagar123@cluster0.o3zxkoz.mongodb.net/userDB?retryWrites=true&w=majority'
 // Connect to MongoDB
 mongoose.connect(live_url)
     .then(() => {
