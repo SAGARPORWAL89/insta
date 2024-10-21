@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/userDB', {
+mongoose.connect('mongodb+srv://sagarporwal8370:AV6y5dV6udAvHFl3@cluster0.pnghy.mongodb.net/userDB?retryWrites=true&w=majority&appName=Cluster0', {
 }).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
