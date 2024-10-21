@@ -2,15 +2,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv')
-dotenv.config()
 // Initialize the app
 const app = express();
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/userDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+}).then(() => {
+    console.log('Connected to MongoDB');
+}).catch((err) => {
+    console.error('Error connecting to MongoDB', err);
 });
 // new update
 // Create a Mongoose Schema now date 
