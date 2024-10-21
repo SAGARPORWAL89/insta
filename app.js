@@ -50,7 +50,7 @@ app.post('/login', (req, res) => {
 });
 
 // Start the server
-const PORT = 4141;
+const PORT = process.env.PORT || 4141;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
