@@ -4,14 +4,14 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 // Initialize the app
 const app = express();
-
+live_url = 'mongodb+srv://sagarporwal8370:AV6y5dV6udAvHFl3@cluster0.pnghy.mongodb.net/userDB?retryWrites=true&w=majority&appName=Cluster0'
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://sagarporwal8370:AV6y5dV6udAvHFl3@cluster0.pnghy.mongodb.net/userDB?retryWrites=true&w=majority&appName=Cluster0', {
-}).then(() => {
-    console.log('Connected to MongoDB');
-}).catch((err) => {
-    console.error('Error connecting to MongoDB', err);
-});
+mongoose.connect(live_url)
+    .then(() => {
+        console.log('Connected to MongoDB');
+    }).catch((err) => {
+        console.error('Error connecting to MongoDB', err);
+    });
 // new update
 // Create a Mongoose Schema now date 
 const userSchema = new mongoose.Schema({
